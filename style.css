@@ -1,0 +1,153 @@
+/*TODO: style the input "please fill field" message*/
+
+html {
+font-size:16px;
+}
+
+body {
+font-family: "PT Sans", sans-serif;
+font-size: 16px;
+line-height: 1.4em;
+}
+
+/*media queries IN PROGRESS*/
+/*
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: #000;
+  }
+  img {
+  width:80vw;
+  }
+  .step {
+  width:80vw;
+  margin-left:10vw;
+  margin-right:10vw;
+  display: block;
+  }
+}*/
+
+h1, h2 {
+text-align:center;
+}
+
+h2 {
+font-weight: normal;
+color:#898989;
+}
+
+#header {
+margin-top: 70px;
+}
+
+main {
+/* margin-top: 70px; */
+margin: 70px auto 50px auto;
+display:flex;
+color:#262626;
+}
+
+.step {
+width:25vw;
+margin:0px 6vw 5vw 0px;
+}
+
+.step:first-child {
+margin-left: 6vw;
+}
+
+img {
+width:25vw;
+}
+
+.step_num {
+color:#fff;
+text-align: center;
+background: #3BC5A0;
+width:1em;
+height:1em;
+padding:10px;
+line-height: 1em;
+margin:40px auto 30px auto;
+border-radius:100%;
+}
+
+/*step 1*/
+input {
+background: #DFFFF5;
+border:2px solid #DFFFF5;
+color:#000;
+transition: all 0.5s ease;
+}
+
+input:focus {
+border:2px solid #53D3A5;
+transition: all 0.5s ease;
+outline: none;
+}
+
+input, input::placeholder {
+font-size: 16px;
+font-family: "PT Sans", sans-serif;
+}
+
+input::placeholder {
+color:#8c8c8c;
+}
+
+#email_input {
+width: 100%;
+height: 45px;
+padding:15px;
+box-sizing: border-box;
+}
+
+button {
+background: #53D3A5;
+font-size: 1em;
+text-align: center;
+color: #FFFFFF;
+font-family: "PT Sans", sans-serif;
+border:0;
+transition: all 0.3s ease;
+}
+
+button:hover, button:focus {
+background: #2F8563;
+outline:none;
+}
+
+#submit {
+width: 85px;
+padding:10px;
+box-sizing: border-box;
+margin-top: 15px;
+margin-left: calc((25vw - 85px) / 2);
+}
+
+/*step 3*/
+#question {
+background: #ccc;
+color:#fff;
+text-align: center;
+padding:5px 8px;
+font-size: 0.8em;
+line-height: 1em;
+margin-left: 8px;
+border-radius:100%;
+}
+
+#answer {
+opacity:0;
+border:1px solid #ccc;
+padding:10px;
+font-size:0.8em;
+line-height: 1.4em;
+box-shadow: 3px 3px 5px #ccc;
+transition: all 0.4s ease;
+}
+
+#answer.fade {
+opacity:1;
+transition: all 0.4s ease;
+}
