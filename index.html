@@ -1,19 +1,50 @@
-<h2> ReallyYou.com </h2>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+<script>
+function questionClick() {
+  var answer = document.getElementById("answer");
+  answer.classList.toggle("fade");
+}
+</script>
+</head>
+<body>
+<div id="header">
+  <h1> ReallyYou </h1>
+  <h2>How to verify somebody on Ferns</h2>
+</div>
 <main>
-    <p> Verifying somebody on Ferns takes two simple steps. First, please enter
-        your email in the box below. </p>
+<!--step 1-->
+<div class="step">
+<img src="step_1.svg"/>
+<p class="step_num">1</p>
+    <p style="text-align:center;"> Enter your email </p>
         <form>
-        <input type= "text" placeholder="Enter your email here." required>
-        <button type="submit">Go!</button>
+        <input type= "text" id="email_input" placeholder="Your email" required>
+        <br /><button type="submit" id="submit">Submit</button>
      </form>
-    <p> Now, send this link to the person whose photo you want to verify. </p>
-    
-    
-    <p> The person who you have sent this link will now send you a picture of
-        themselves holding up numbers with their fingers via email. Note
-        that the email you receive will be through our own servers, and
-        the person you are communicating with does not have access to your
-        personal email. If the person is holding up the correct numbers,
-        then feel safe to chat! </p>
-    
+</div>
+
+<!---step 2--->
+<div class="step">
+<img src="step_2.svg" width="350px"/>
+<p class="step_num">2</p>
+    <p> You’ll receive an email with a link.</p>
+
+<p><b>Send the link</b> to the person whose photo you want to verify. </p>
+</div>
+
+<div class="step">
+<img src="step_3.svg" width="350px"/>
+<p class="step_num">3</p>
+  <p> The person who you have sent this link will send you a picture of
+themselves holding up numbers with their fingers via an email you’ll receive.<button id="question" onclick="questionClick()">?</button></p>
+
+<p>If the person is holding up the correct numbers, then feel safe to chat! </p>
+<div id="answer">
+   The email you receive will be through our own servers. The person you are communicating with doesn’t have access to your email.
+</div>
+</div>
+
 </main>
+</body>
