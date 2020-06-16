@@ -1,0 +1,29 @@
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+
+</head>
+<body>
+<div id="header">
+  <h1> ReallyYou </h1>
+  <h2>How to verify somebody on Ferns</h2>
+</div>
+<main>
+<!--step 1-->
+<div class="step">
+
+</div>
+<!---step 2--->
+<div class="step">
+<img src="{{ url_for('static', filename='step_2.svg') }}" width="350px"/>
+<p class="step_num">2</p>
+    <p> Send this link to the person you want to verify.</p>
+
+<p><b>this is the link {{ generatedLink }} </p>
+</div>
+
+<div class="step">
+
+</div>
+
+</main>
+</body>
