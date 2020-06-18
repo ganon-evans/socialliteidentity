@@ -26,9 +26,17 @@ def give_link():
     emailAddress = str(request.args['email_input'])
     #uniqueID = ''
     #print('this method got called!')
-    address = 'really-you.net/'+emailAddress
+    address = 'really-you.net/'+str(f.encrypt(emailAddress.encode()))
     return render_template('getlink.html', generatedLink = address)
- 
+
+@app.route('/<sendID>',methods=['GET'])
+def acceptImagePage(sendID):
+    return render_template('verifyIdentity.html',sendID = sendID)
+
+@app.route('/<sendID>',methods=['POST'])
+def acceptImage(sendID):
+    return render_template('verifyIdentity.html',sendID = sendID)
+
 def processRequest(email,requestID):
     command = '''INSERT INTO requests_table
     VALUES ('%s', '%s')'''.format(email.requestID)
@@ -38,7 +46,7 @@ def processRequest(email,requestID):
 def processEmailRecieve(requestID,img):
     command = """
     SELECT FROM requests_table
-    WHERE requestID = %s"""
+    WHERE requestID = %s""" 
 
 def initializeDatabase():
     connection = sqlite3.connect("requests.db")
