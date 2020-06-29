@@ -18,13 +18,13 @@
   var canvas = null;
   var photo = null;
   var startbutton = null;
-
+  var timer = null;
   function startup() {
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
-
+	timer = document.getElementById('timer');
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(function(stream) {
       video.srcObject = stream;
@@ -73,6 +73,38 @@
     photo.setAttribute('src', data);
   }
   
+  function countdown(){
+
+		// Get today's date and time
+		var start = new Date().getTime();
+		var seconds = 5
+		// Find the distance between now and the count down date
+		while(true){
+			var now = new Date().getTime();
+			var distance = now-start;
+		
+			// Time calculations for days, hours, minutes and seconds
+			passedSec = Math.floor((distance % (1000 * 60)) / 1000);
+			
+			if(passedSec > 1){
+				start = new Date().getTime();
+				// Output the result in an element with id="demo"
+				// document.getElementById("timer").innerHTML = toString(seconds) + "s ";
+				timer.innerHTML = toString(seconds) + "sajefajfepoaijfeposiajpfeoijapweofijaepwoij ";
+				console.log(timer.innerHTML)
+				seconds = seconds - 1
+				console.log(seconds)
+			}
+		
+		// If the count down is over, write some text 
+		if (seconds < 0) {
+			// document.getElementById("timer").innerHTML = "0";
+			timer.innerHTML = toString(seconds) + "s ";
+			return
+		}
+  }
+}
+  
   // Capture a photo by fetching the current contents of the video
   // and drawing it into a canvas, then converting that to a PNG
   // format data URL. By drawing it on an offscreen canvas and then
@@ -81,6 +113,7 @@
 
   function takepicture() {
     var context = canvas.getContext('2d');
+	countdown()
     if (width && height) {
       canvas.width = width;
       canvas.height = height;
@@ -92,7 +125,7 @@
 	  formData.append('sendID',sendID);
 	  formData.append('img',data);
 	  var request = new XMLHttpRequest();
-	  request.open('POST', '127.0.0.1:5000/hello');
+	  request.open('POST', '/'+sendID);
 	  request.send(formData);
 
     } else {

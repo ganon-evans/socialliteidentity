@@ -2,10 +2,12 @@
 
 <main>
 <head>
+
 	<h1> ReallyYou Identity Verification
     </h1>
 	<meta charset='utf-8'>
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all">
+	
 	<script type="text/javascript">
             var sendID = "{{ sendID }}"
         </script>
@@ -15,13 +17,15 @@
         friend!
     </p>
 	<p> Below, you'll see two numbers between 0 and 5.
-	5                 5
+	{{rightInt}}                 {{leftInt}}
     </p>
     
 	</script>
 </head>
 <body>
+
 <div class="contentarea">
+
 
 
   <div class="camera">
@@ -48,7 +52,7 @@
     </p>
 </body>
     
-    
+    <p id="timer"></p>
     
     
     
