@@ -1,16 +1,17 @@
 <!doctype html>
 
 <main>
+
 <head>
 
 	<h1> ReallyYou Identity Verification
     </h1>
 	<meta charset='utf-8'>
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all">
-	
+	<p id="timer"></p>
 	<script type="text/javascript">
             var sendID = "{{ sendID }}"
-        </script>
+     </script>
 	<script src="{{ url_for('static', filename='capture.js') }}">
 	<p> Hi there! Somebody has asked you to verify your identity on Ferns!
         Please follow these steps to confirm your identity with your new
@@ -24,10 +25,9 @@
 </head>
 <body>
 
+
+ 
 <div class="contentarea">
-
-
-
   <div class="camera">
     <video id="video">Video stream not available.</video>
     <button id="startbutton">Take photo</button> 
@@ -49,10 +49,12 @@
     <p> Take a picture of yourself holding up your fingers either with the
         webcam of your computer or an uploaded picture. This picture will be
         sent to your friend, who will easily verify your identity!
+		Please hold up a {{rightInt}} in right hand and {{leftInt}} in left hand
     </p>
+	
 </body>
     
-    <p id="timer"></p>
+    
     
     
     

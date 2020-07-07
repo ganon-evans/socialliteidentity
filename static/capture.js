@@ -54,7 +54,9 @@
     }, false);
 
     startbutton.addEventListener('click', function(ev){
-      takepicture();
+      //countdown2();
+	  takepicture();
+	  
       ev.preventDefault();
     }, false);
     
@@ -71,6 +73,23 @@
 
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
+  }
+  
+  function countdown2(){
+  var i=0, j=5;
+var iv = setInterval(function() {
+    timer.innerHTML = toString(i) + "so ";
+	console.log(i);
+	//var start = new Date().getTime();
+	//while(true){
+	//var now = new Date().getTime();
+	//var distance = now-start;
+	//var passedSec = Math.floor((distance % (1000 * 60)) / 1000);
+	//if(passedSec >= 1){break};
+    // things that take a while to do
+    if (++i>=j) clearInterval(iv);
+}, 1000);
+
   }
   
   function countdown(){
@@ -90,7 +109,7 @@
 				start = new Date().getTime();
 				// Output the result in an element with id="demo"
 				// document.getElementById("timer").innerHTML = toString(seconds) + "s ";
-				timer.innerHTML = toString(seconds) + "sajefajfepoaijfeposiajpfeoijapweofijaepwoij ";
+				timer.innerHTML = 'hsoef' + "sajefajfepoaijfeposiajpfeoijapweofijaepwoij ";
 				console.log(timer.innerHTML)
 				seconds = seconds - 1
 				console.log(seconds)
@@ -105,15 +124,33 @@
   }
 }
   
+  function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+  
   // Capture a photo by fetching the current contents of the video
   // and drawing it into a canvas, then converting that to a PNG
   // format data URL. By drawing it on an offscreen canvas and then
   // drawing that to the screen, we can change its size and/or apply
   // other changes before drawing it.
 
-  function takepicture() {
+  async function takepicture() {
     var context = canvas.getContext('2d');
-	countdown()
+	//countdown()
+	document.getElementById("timer").innerHTML = "5";
+	await sleep(1000)
+	document.getElementById("timer").innerHTML = "4";
+	await sleep(1000)
+	document.getElementById("timer").innerHTML = "3";
+	await sleep(1000)
+	document.getElementById("timer").innerHTML = "4";
+	await sleep(1000)
+	document.getElementById("timer").innerHTML = "2";
+	await sleep(1000)
+	document.getElementById("timer").innerHTML = "1";
+	await sleep(1000)
+	document.getElementById("timer").innerHTML = "0";
+	await sleep(1000)
     if (width && height) {
       canvas.width = width;
       canvas.height = height;
