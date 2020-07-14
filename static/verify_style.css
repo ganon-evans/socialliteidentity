@@ -1,0 +1,107 @@
+body {
+font-family: 'PT Sans', sans-serif;
+font-size: 16px;
+line-height:140%;
+color:#242424;
+}
+
+
+h1, h2, h3 {
+text-align: center;
+}
+h2, h3 {
+font-weight:normal;
+}
+
+h1 {
+font-family: "Muli", sans-serif;
+font-weight: bold;
+font-size: 3em;
+line-height: 1.4em;
+margin:50px 0px 00px 0px;
+color: #000000;
+}
+h2 {
+color:#898989;
+margin:10px 0px 30px;
+}
+h3 {
+text-transform: uppercase;
+}
+
+#desc {
+width:70vw;
+text-align: center;
+margin:auto;
+}
+#numbers {
+text-align: center;
+}
+.num {
+display: inline-block;
+background-color: #3BC5A0;
+color:#fff;
+border-radius: 100%;
+font-size: 1.5em;
+padding:20px 23px;
+margin:0px 10px;
+}
+
+#steps_container {
+display: flex;
+margin-top:40px;
+}
+
+.step {
+width:45vw;
+margin:20px 30px 30px 20px;
+}
+.step_num {
+background-color: #3bc5a0;
+color:#fff;
+padding:10px 15px;
+width:40px;
+box-sizing: border-box;
+border-radius: 100%;
+display: inline;
+margin:0px 10px 35px 0px;
+}
+.step span {
+color:#8a8a8a;
+}
+#step_1, #step_2, #step_3 {
+margin-left:55px;
+margin-top:-30px;
+}
+
+#photo_frame {
+background: #E7E6E6;
+border-radius: 10px;
+width:45vw;
+height:400px;
+}
+#take_photo {
+text-transform: uppercase;
+background-color: #3bc5a0;
+color:#fff;
+padding:10px 15px;
+font-size: 1.2em;
+font-family: "PT Sans", sans-serif;
+border-radius:10px;
+height:50px;
+width:190px;
+box-sizing: border-box;
+border:none;
+letter-spacing: 0.5px;
+margin-left:calc(22.5vw - 95px);
+margin-top:175px;
+transition: all 0.2s ease;
+}
+#take_photo img {
+vertical-align: bottom;
+margin-right:10px;
+}
+#take_photo:hover, #take_photo:active, #take_photo:focus {
+background-color: #259c7c;
+outline:none;
+}
