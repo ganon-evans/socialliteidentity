@@ -105,3 +105,48 @@ margin-right:10px;
 background-color: #259c7c;
 outline:none;
 }
+
+/* get link page */
+#gl #content {
+position: absolute;
+top:40%;
+left:50%;
+transform: translate(-50%,-40%);
+}
+#gl h2 {
+line-height: 1.4em;
+}
+
+#gl img {
+margin-left:25%;
+margin-top:20px;
+}
+
+#gl #link {
+width:650px;
+margin:60px auto 0px auto;
+}
+
+#gl input {
+width: 500px;
+padding:15px;
+/* box-sizing: border-box; */
+font-size: 1em;
+font-family:"PT Sans", sans-serif;
+background: #DFFFF5;
+outline:none;
+border:none;
+color:#545353;
+}
+
+#gl button {
+outline:none;
+width:150px;
+background: #53D3A5;
+color:#fff;
+font-size: 1em;
+padding:15px;
+border:0px;
+font-family:"PT Sans", sans-serif;
+margin-left:-5px;
+}
