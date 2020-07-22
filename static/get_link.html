@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="verify_style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+<body id="gl">
+
+<div id="content">
+
+<h1>ReallyYou</h1>
+<h2>Send this link to the
+person whose photo you want to verify.</h2>
+<img src="step_2.svg"/ width="50%"/>
+
+<div id="link">
+  <input type="text" value="http://yourlinkhere.com" id="link_input" />
+  <button onclick="copy()" id="link_button">Copy to clipboard</button>
+</div>
+
+</div>
+
+<script>
+function copy() {
+/* Get the text field */
+  var copyText = document.getElementById("link_input");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  document.getElementById("link_button").innerHTML = "Copied!";
+}
+</script>
+</body>
+</html>
